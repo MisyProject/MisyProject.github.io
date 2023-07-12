@@ -6,38 +6,53 @@
         body {
             font-family: Arial, sans-serif;
             background-color: white;
-            color: white;
+            color: #333;
             padding: 30px;
         }
         .logo {
             width: 200px;
             height: auto;
+            margin-bottom: 20px;
         }
         .main-container {
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            color: #ff6600;
         }
         .link {
             display: block;
             margin: 20px 0;
-            color: white;
+            color: #333;
             text-decoration: none;
             font-size: 20px;
+            transition: color 0.3s ease;
         }
         .link:hover {
+            color: #ff6600;
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="main-container">
-        <img class="logo" src="misy_transparent.png" alt="MISY logo"> <!-- update the src attribute with the path to your logo -->
+        <img class="logo" src="misy_transparent.png" alt="MISY logo">
         <h1>Welcome to MISY</h1>
         <a class="link" href="privacy.html">Privacy Policy</a>
         <a class="link" href="data.html">Data Policy</a>
-        <a class="link" href="account_deletion_request.html">Delete Account</a> <!-- update with the correct filename for your account deletion form -->
+        <a class="link" href="account_deletion_request.html">Delete Account</a>
     </div>
+    <form action="https://formspree.io/f/{your_formspree_id}" method="post">
+        <input type="text" name="name" placeholder="Your Name">
+        <input type="email" name="_replyto" placeholder="Your Email">
+        <textarea name="message" placeholder="Your Message"></textarea>
+        <button type="submit">Send</button>
+    </form>
+
 </body>
 </html>
-
