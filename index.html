@@ -25,7 +25,7 @@
         h1 {
             color: #ff6600;
         }
-        .link, label {
+        .link {
             display: block;
             margin: 20px 0;
             color: #333;
@@ -37,27 +37,6 @@
             color: #ff6600;
             text-decoration: underline;
         }
-        input[type="email"], textarea {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        button {
-            display: inline-block;
-            background-color: #ff6600;
-            color: white;
-            padding: 10px 20px;
-            font-size: 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-        button:hover {
-            background-color: #cc5200;
-        }
     </style>
 </head>
 <body>
@@ -67,22 +46,30 @@
         <a class="link" href="privacy.html">Privacy Policy</a>
         <a class="link" href="data.html">Data Policy</a>
         <a class="link" href="account_deletion_request.html">Delete Account</a>
-        
         <form
-          action="https://formspree.io/f/maygyawa"
-          method="POST"
+            action="https://formspree.io/f/maygyawa"
+            method="POST"
+            id="contactForm"
         >
-          <label>
-            Your email:
-            <input type="email" name="email">
-          </label>
-          <label>
-            Your message:
-            <textarea name="message"></textarea>
-          </label>
-          <!-- your other form fields go here -->
-          <button type="submit">Send</button>
+            <label>
+                Your email:
+                <input type="email" name="email">
+            </label>
+            <label>
+                Your message:
+                <textarea name="message"></textarea>
+            </label>
+            <button type="submit">Send</button>
         </form>
     </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function() {
+            setTimeout(function() {
+                window.location.href = 'thankyou.html';
+            }, 1000);
+        });
+    </script>
+
 </body>
 </html>
